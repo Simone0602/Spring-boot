@@ -57,6 +57,7 @@ public class MainController {
             @PathVariable(name = "id") Integer id){
         return userRepository.findById(id).orElseThrow(
                 () -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Utente non trovato")
+
         );
     }
 }
